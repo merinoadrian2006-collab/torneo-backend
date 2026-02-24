@@ -1,0 +1,221 @@
+/* ==================== RESET ==================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #101214; /* fondo muy serio */
+    color: #f0f0f0;
+    min-height: 100vh;
+    line-height: 1.6;
+    overflow-x: hidden;
+    padding: 40px 30px; /* más espacio general */
+}
+
+/* ==================== HERO / TITULOS ==================== */
+.hero {
+    max-width: 100%;
+    padding: 60px 40px;
+    background: #1c1f28;
+    border-radius: 12px;
+    border: 1px solid #2a2d38;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #ffd700; /* dorado elegante */
+    margin-bottom: 20px;
+    display: block;
+    text-align: center;
+}
+
+.hero-sub {
+    font-size: 1.4rem;
+    color: #cccccc;
+    margin-top: 12px;
+    text-align: center;
+}
+
+/* ==================== TARJETAS ==================== */
+.card, .card-torneo, .card-equipo, .card-partido {
+    background: #1b1e28;
+    border-radius: 10px;
+    padding: 24px;
+    margin-bottom: 20px;
+    border-left: 4px solid #555;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+    transition: all 0.3s ease;
+}
+
+.card:hover, .card-torneo:hover, .card-equipo:hover, .card-partido:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.6);
+}
+
+.card-torneo h2, .card-equipo h3, .card-partido h3 {
+    font-size: 1.8rem;
+    margin-bottom: 14px;
+    color: #ffd700;
+    text-align: center;
+}
+
+.card-torneo .deporte, .card-equipo .deporte, .card-partido .deporte {
+    font-weight: 600;
+    color: #88c0d0;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+/* ==================== BOTONES ==================== */
+button {
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 14px 28px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    margin: 12px 8px;
+    border: none;
+    display: inline-block;
+}
+
+button.primary, .btn-detalle {
+    background: #ffd700;
+    color: #101214;
+    border: 1px solid #ffd700;
+    box-shadow: 0 4px 10px rgba(255,215,0,0.3);
+}
+
+button.primary:hover, .btn-detalle:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(255,215,0,0.4);
+}
+
+button.eliminar-equipo {
+    background: #c53030;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    border: 2px solid #a82828;
+}
+
+button.eliminar-equipo:hover {
+    background: #a82828;
+    transform: scale(1.1);
+    box-shadow: 0 0 8px #c53030;
+}
+
+.btn-crear-torneo, .btn-agregar {
+    background: #3b82f6;
+    color: #fff;
+    padding: 14px 28px;
+    box-shadow: 0 4px 10px rgba(59,130,246,0.3);
+}
+
+.btn-crear-torneo:hover, .btn-agregar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(59,130,246,0.4);
+}
+
+/* ==================== INPUTS ==================== */
+input, select {
+    background: #1c1f28;
+    border: 1px solid #555;
+    color: #f0f0f0;
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-size: 1rem;
+    width: 100%;
+    margin-bottom: 14px;
+}
+
+input:focus, select:focus {
+    border-color: #ffd700;
+    box-shadow: 0 0 6px #ffd700;
+    outline: none;
+}
+
+/* ==================== TABLAS ==================== */
+table, .tabla-clasificacion {
+    width: 100%;
+    border-radius: 8px;
+    border-collapse: collapse;
+    overflow: hidden;
+    font-size: 0.9rem;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+}
+
+th, td {
+    padding: 16px 20px;
+    text-align: center;
+}
+
+th {
+    background: #3b82f6;
+    color: #f0f0f0;
+}
+
+tbody tr:nth-child(even) {
+    background: rgba(255,255,255,0.05);
+}
+
+tbody tr:hover {
+    background: rgba(255,215,0,0.08);
+}
+
+/* ==================== CHIPS ==================== */
+.deporte-chip {
+    display: inline-block;
+    padding: 5px 14px;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    margin-right: 6px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.deporte-chip.futbol { background: #ffd700; color: #101214; }
+.deporte-chip.baloncesto { background: #3b82f6; color: #fff; }
+.deporte-chip.tenis { background: #f5d142; color: #101214; }
+.deporte-chip.hockey { background: #9c27b0; color: #fff; }
+
+.deporte-chip:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 6px rgba(255,215,0,0.3);
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 600px) {
+    .hero-title { font-size: 2rem; }
+    button, .btn-detalle, .btn-cruz, .btn-crear-torneo, .btn-agregar, button.eliminar-equipo {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+        width: 100%;
+    }
+    input, select {
+        font-size: 0.9rem;
+        padding: 10px 14px;
+    }
+    .card, .card-torneo, .card-equipo, .card-partido {
+        padding: 16px;
+        margin-bottom: 16px;
+    }
+    .deporte-chip {
+        font-size: 0.75rem;
+        padding: 3px 10px;
+    }
+    .card-actions { justify-content: center; }
+    .input-grupo { flex-direction: column; gap: 10px; align-items: stretch; }
+    .tabla-clasificacion th, .tabla-clasificacion td { padding: 10px; }
+}
