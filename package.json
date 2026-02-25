@@ -1,0 +1,14 @@
+{
+  "name": "torneo-app",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "type": "commonjs",
+  "dependencies": {
+    "express": "^5.2.1",
+    "mongoose": "^9.2.2",
+    "cors": "^2.8.6"
+  }
+}
